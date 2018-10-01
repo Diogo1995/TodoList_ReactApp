@@ -8,7 +8,7 @@ const App = () => {
     return (
         <div className="container">                                     
             <div className="col-12">                                    
-                <h1 className="text-center">Good Morning Vietnam!</h1>  
+                <h1 className="text-center">Hello, World!</h1>  
             </div>                                                      
         </div>                                                          
     )
