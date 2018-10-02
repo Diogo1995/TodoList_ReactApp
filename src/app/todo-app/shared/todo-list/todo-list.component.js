@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 const TodoList = ({ todoList, toggleTodo }) => {
 
     const handleToDoCheckBoxChange = (event, i) => {
         const value = event.target.checked;
-        toggleTodo({index: i, value});
+        toggleTodo({ index: i, value });
     }
 
     return (
@@ -15,9 +16,9 @@ const TodoList = ({ todoList, toggleTodo }) => {
                         name={i}
                         type="checkbox"
                         checked={obj.done}
-                        onChange={ e => handleToDoCheckBoxChange(e, i) }
+                        onChange={e => handleToDoCheckBoxChange(e, i)}
                     />
-                    {obj.name}
+                    <Link to={`/todo-app/${i}`}>{obj.name}</Link>
                 </li>)
             )}
         </ul>
